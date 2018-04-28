@@ -19,8 +19,10 @@ namespace ExamenMrPactito
             RobotFenceFixer robotFenceFixer = new RobotFenceFixer();
             RobotCooker robotCooker = new RobotCooker();
 
-            Invocker robotRescueInvocker = new ARobotRescue();
-            robotRescueInvocker.SetCommand();
+            Invocker robotRescueInvocker = new ARobotCarPainter();
+
+
+           
         }
     }
 }

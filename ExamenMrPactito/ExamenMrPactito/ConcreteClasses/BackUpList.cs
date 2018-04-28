@@ -9,14 +9,28 @@ namespace ExamenMrPactito.ConcreteClasses
 {
     class BackUpList:ICommand
     {
+        private readonly List<ICommand> _commands;
+
+        public BackUpList(List<ICommand> commands)
+        {
+            _commands = commands;
+        }
+
         public void Execute()
         {
-            throw new NotImplementedException();
+            foreach (var command in _commands)
+            {
+                command.Execute();
+            }
         }
 
         public void Undo()
         {
-            throw new NotImplementedException();
+            _commands.Reverse();
+            foreach (var commad in _commands)
+            {
+                commad.Undo();
+            }
         }
 
         public void Finish()
@@ -24,7 +38,7 @@ namespace ExamenMrPactito.ConcreteClasses
             throw new NotImplementedException();
         }
 
-        public void GetWeight()
+        public int GetWeight()
         {
             throw new NotImplementedException();
         }

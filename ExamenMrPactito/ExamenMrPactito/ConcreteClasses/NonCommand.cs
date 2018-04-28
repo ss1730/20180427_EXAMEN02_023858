@@ -24,7 +24,7 @@ namespace ExamenMrPactito.ConcreteClasses
             throw new NotImplementedException();
         }
 
-        public void GetWeight()
+        public int GetWeight()
         {
             throw new NotImplementedException();
         }

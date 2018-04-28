@@ -43,11 +43,50 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractClass\AbstractConcreteClass\ARobotCarPainter.cs" />
+    <Compile Include="AbstractClass\AbstractConcreteClass\ARobotCooker.cs" />
+    <Compile Include="AbstractClass\AbstractConcreteClass\ARobotFenceFixer.cs" />
+    <Compile Include="AbstractClass\AbstractConcreteClass\ARobotRescue.cs" />
+    <Compile Include="AbstractClass\Invocker.cs" />
+    <Compile Include="ConcreteClasses\BackUpList.cs" />
+    <Compile Include="ConcreteClasses\Car\CarGiveToUser.cs" />
+    <Compile Include="ConcreteClasses\Car\CarPutInOven.cs" />
+    <Compile Include="ConcreteClasses\Car\CarPutOutOven.cs" />
+    <Compile Include="ConcreteClasses\Car\CarPutPaint.cs" />
+    <Compile Include="ConcreteClasses\Car\CarRemovePaint.cs" />
+    <Compile Include="ConcreteClasses\Cook\CookMediumRareBurger.cs" />
+    <Compile Include="ConcreteClasses\Cook\CookRareBurger.cs" />
+    <Compile Include="ConcreteClasses\Cook\CookRemoveTrashBurger.cs" />
+    <Compile Include="ConcreteClasses\Cook\CookServerBurger.cs" />
+    <Compile Include="ConcreteClasses\Cook\CookWellDoneBurger.cs" />
+    <Compile Include="ConcreteClasses\Fence\FenceChargeMode.cs" />
+    <Compile Include="ConcreteClasses\Fence\FenceFix.cs" />
+    <Compile Include="ConcreteClasses\Fence\FenceIdle.cs" />
+    <Compile Include="ConcreteClasses\Fence\FencesRestMode.cs" />
+    <Compile Include="ConcreteClasses\Fence\FenceVeryWellFix.cs" />
+    <Compile Include="ConcreteClasses\NonCommand.cs" />
+    <Compile Include="ConcreteClasses\Rescue\CatToOwner.cs" />
+    <Compile Include="ConcreteClasses\Rescue\CatFocus.cs" />
+    <Compile Include="ConcreteClasses\Rescue\CatRescue.cs" />
+    <Compile Include="ConcreteClasses\Rescue\CatSearch.cs" />
+    <Compile Include="ConcreteClasses\Rescue\CatToCaress.cs" />
+    <Compile Include="ConcreteRecivers\RobotCarPainter.cs" />
+    <Compile Include="ConcreteRecivers\RobotCooker.cs" />
+    <Compile Include="ConcreteRecivers\RobotFenceFixer.cs" />
+    <Compile Include="ConcreteRecivers\RobotRescue.cs" />
+    <Compile Include="Interfaces\ICommand.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="BackUpFiles\ARobotCarPainter.txt" />
+    <Content Include="BackUpFiles\ARobotCooker.txt" />
+    <Content Include="BackUpFiles\ARobotFenceFixer.txt" />
+    <Content Include="BackUpFiles\ARobotRescue.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

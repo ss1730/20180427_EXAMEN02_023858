@@ -24,9 +24,9 @@ namespace ExamenMrPactito
 
             Invocker robotRescueInvocker = new ARobotCarPainter();
 
-            Invocker mainRobot = new AMainRobot();
-            mainRobot.SetCommand(new BackUpList(new List<ICommand> { new CarGiveToUser(robotCarPainter,3),new CarPutInOven(robotCarPainter,1),new CookRareBurger(robotCooker,4)}));
-            
+            robotRescueInvocker.SetCommand(new BackUpList(new List<ICommand> { new CarGiveToUser(robotCarPainter,3),new CarPutInOven(robotCarPainter,1),new CookRareBurger(robotCooker,4)}));
+            robotRescueInvocker.ExecuteCommand();
+
 
            
         }

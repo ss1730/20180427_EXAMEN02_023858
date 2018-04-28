@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractClass\AbstractConcreteClass\AMainRobot.cs" />
     <Compile Include="AbstractClass\AbstractConcreteClass\ARobotCarPainter.cs" />
     <Compile Include="AbstractClass\AbstractConcreteClass\ARobotCooker.cs" />
     <Compile Include="AbstractClass\AbstractConcreteClass\ARobotFenceFixer.cs" />

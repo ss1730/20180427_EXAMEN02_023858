@@ -1,4 +1,5 @@
-﻿using ExamenMrPactito.Interfaces;
+﻿using System.Collections.Generic;
+using ExamenMrPactito.Interfaces;
 
 namespace ExamenMrPactito.AbstractClass.AbstractConcreteClass
 {
@@ -6,28 +7,32 @@ namespace ExamenMrPactito.AbstractClass.AbstractConcreteClass
     {
         private readonly int _carrierWeight;
         private readonly string _pathResotre;
+        private readonly List<ICommand> _commands;
 
         public ARobotCarPainter()
         {
+            
             _carrierWeight = 10;
+            _commands = new List<ICommand>(_carrierWeight);
             _pathResotre = "";
         }
 
-
-
         public override void SetCommand(ICommand iCommand)
         {
-            throw new System.NotImplementedException();
+            _commands.Add(iCommand);
         }
 
-        public override void ExecuteCommand(int task)
+        public override void ExecuteCommand()
         {
-            throw new System.NotImplementedException();
+            foreach (ICommand t in _commands)
+            {
+                t.Execute();
+            }
         }
 
         public override void Undo(int task)
         {
-            throw new System.NotImplementedException();
+                _commands[task].Undo();
         }
 
         public override int GetCarrierWeight()

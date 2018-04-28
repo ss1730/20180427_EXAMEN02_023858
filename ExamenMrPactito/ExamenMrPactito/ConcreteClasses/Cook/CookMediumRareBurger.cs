@@ -3,31 +3,39 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ExamenMrPactito.ConcreteRecivers;
 using ExamenMrPactito.Interfaces;
 
 namespace ExamenMrPactito.ConcreteClasses.Cook
 {
     class CookMediumRareBurger : ICommand
     {
-        private int _weight;
+        private readonly RobotCooker _robotCarPainter;
+        private readonly int _taskWeight;
+        public CookMediumRareBurger(RobotCooker robotCarPainter, int weight)
+        {
+            _robotCarPainter = robotCarPainter;
+            _taskWeight = weight;
+        }
+
         public void Execute()
         {
-            throw new NotImplementedException();
+            _robotCarPainter.Start();
         }
 
         public void Undo()
         {
-            throw new NotImplementedException();
+            _robotCarPainter.Rest();
         }
 
         public void Finish()
         {
-            throw new NotImplementedException();
+            _robotCarPainter.Finish();
         }
 
-        public void GetWeight()
+        public int GetWeight()
         {
-            throw new NotImplementedException();
+            return _taskWeight;
         }
     }
 }

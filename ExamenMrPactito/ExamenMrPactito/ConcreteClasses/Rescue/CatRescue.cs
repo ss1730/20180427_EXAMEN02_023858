@@ -10,30 +10,32 @@ namespace ExamenMrPactito.ConcreteClasses.Rescue
 {
     class CatRescue : ICommand
     {
-        private readonly RobotRescue _robotRescue;
-
-        public CatRescue(RobotRescue robotRescue)
+        private readonly RobotRescue _robotCarPainter;
+        private readonly int _taskWeight;
+        public CatRescue(RobotRescue robotCarPainter, int weight)
         {
-            _robotRescue = robotRescue;
+            _robotCarPainter = robotCarPainter;
+            _taskWeight = weight;
         }
+
         public void Execute()
         {
-            throw new NotImplementedException();
+            _robotCarPainter.Start();
         }
 
         public void Undo()
         {
-            throw new NotImplementedException();
+            _robotCarPainter.Rest();
         }
 
         public void Finish()
         {
-            throw new NotImplementedException();
+            _robotCarPainter.Finish();
         }
 
-        public void GetWeight()
+        public int GetWeight()
         {
-            throw new NotImplementedException();
+            return _taskWeight;
         }
     }
 }

@@ -11,6 +11,6 @@ namespace ExamenMrPactito.Interfaces
         void Execute();
         void Undo();
         void Finish();
-        void GetWeight();
+        int GetWeight();
     }
 }

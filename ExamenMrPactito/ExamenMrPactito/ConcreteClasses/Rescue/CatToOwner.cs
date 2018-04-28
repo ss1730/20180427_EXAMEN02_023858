@@ -6,14 +6,13 @@ using System.Threading.Tasks;
 using ExamenMrPactito.ConcreteRecivers;
 using ExamenMrPactito.Interfaces;
 
-namespace ExamenMrPactito.ConcreteClasses.Car
+namespace ExamenMrPactito.ConcreteClasses.Rescue
 {
-    class CarPutPaint : ICommand
+    class CatToOwner : ICommand
     {
-
-        private readonly RobotCarPainter _robotCarPainter;
+        private readonly RobotRescue _robotCarPainter;
         private readonly int _taskWeight;
-        public CarPutPaint(RobotCarPainter robotCarPainter, int weight)
+        public CatToOwner(RobotRescue robotCarPainter, int weight)
         {
             _robotCarPainter = robotCarPainter;
             _taskWeight = weight;

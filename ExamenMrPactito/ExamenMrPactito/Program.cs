@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 using ExamenMrPactito.AbstractClass.AbstractConcreteClass;
 using ExamenMrPactito.ConcreteRecivers;
 using ExamenMrPactito.AbstractClass;
+using ExamenMrPactito.ConcreteClasses;
 using ExamenMrPactito.ConcreteClasses.Car;
+using ExamenMrPactito.ConcreteClasses.Cook;
+using ExamenMrPactito.Interfaces;
 
 namespace ExamenMrPactito
 {
@@ -21,6 +24,9 @@ namespace ExamenMrPactito
 
             Invocker robotRescueInvocker = new ARobotCarPainter();
 
+            Invocker mainRobot = new AMainRobot();
+            mainRobot.SetCommand(new BackUpList(new List<ICommand> { new CarGiveToUser(robotCarPainter,3),new CarPutInOven(robotCarPainter,1),new CookRareBurger(robotCooker,4)}));
+            
 
            
         }

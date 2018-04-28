@@ -18,7 +18,7 @@ namespace ExamenMrPactito.AbstractClass.AbstractConcreteClass
             
             _carrierWeight = 10;
             _commands = new List<ICommand>(_carrierWeight);
-            _pathResotre = "../../BackUpFiles/RobotCarPainter.txt";
+            _pathResotre = "../../BackUpFiles/ARobotCarPainter.txt";
             CheckIfWasAProblem();
         }
 
@@ -71,6 +71,7 @@ namespace ExamenMrPactito.AbstractClass.AbstractConcreteClass
             else
             {
                 //ParsearDatos
+                ICommand iCommand;
                 foreach (var command in restore)
                 {
                     Console.WriteLine("Tu Tarea es: "+ command);

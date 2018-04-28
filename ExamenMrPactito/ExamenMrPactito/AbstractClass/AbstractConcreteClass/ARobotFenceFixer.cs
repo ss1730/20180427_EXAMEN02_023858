@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using ExamenMrPactito.Interfaces;
 
 namespace ExamenMrPactito.AbstractClass.AbstractConcreteClass
@@ -43,6 +45,36 @@ namespace ExamenMrPactito.AbstractClass.AbstractConcreteClass
         public override string GetBackUpPath()
         {
             return _pathResotre;
+        }
+
+        public string EmptyMessage()
+        {
+            return "Estoy libre!...de trabajos";
+        }
+
+
+        public string FullMessage()
+        {
+            return "Estoy Lleno!";
+        }
+
+        public void CheckIfWasAProblem()
+        {
+            var restore = File.ReadAllLines(_pathResotre).ToList();
+            if (!restore.Any())
+            {
+                Console.WriteLine("No Hubo error en el paso");
+            }
+            else
+            {
+                //ParsearDatos
+                ICommand iCommand;
+                foreach (var command in restore)
+                {
+                    Console.WriteLine("Tu Tarea es: " + command);
+                }
+
+            }
         }
     }
 }
